@@ -41,6 +41,7 @@ class TableDetailFragment : android.app.Fragment(){
     //Delegado
     interface OnTableDetailListener {
         fun onTableAddDish(tablePos: Int)
+        fun onTablePrintBill(tablePos: Int)
     }
 
 
@@ -72,6 +73,12 @@ class TableDetailFragment : android.app.Fragment(){
             root.findViewById<FloatingActionButton?>(R.id.add_dish)?.setOnClickListener { v: View ->
                 //avisamos a la actividad que lance una actity para mostrar la lista de platos a seleciconae
                 onTableDetailListener?.onTableAddDish(tablepos)
+            }
+
+            //Impresion factura de la mesa
+            root.findViewById<FloatingActionButton?>(R.id.print_bill)?.setOnClickListener { v: View ->
+
+                onTableDetailListener?.onTablePrintBill(tablepos)
             }
 
         }
