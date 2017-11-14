@@ -5,10 +5,9 @@ import java.io.Serializable
 /**
  * Table definition
  */
-data class table(val idtable : Int, val name : String, val dishes : MutableList<Dish>? = null) : Serializable {
+data class table(val idtable : Int, val name : String) : Serializable {
 
-
-    constructor(idtable : Int, name : String) : this(idtable, name, null){}
+    val dishes : MutableList<Dish> = arrayListOf()
 
     // Lista de platos, fujcnones
 
@@ -24,22 +23,15 @@ data class table(val idtable : Int, val name : String, val dishes : MutableList<
     }
 
     fun delDish( position : Int){
-        dishes?.removeAt(position)
+        dishes.removeAt(position)
     }
     fun addDish (idDish : Int, name : String, price : Float, img : Int,  costumerVariants : String ){
-        dishes?.add(Dish(idDish, name, price, img, costumerVariants))
+        dishes.add(Dish(idDish, name, price, img, costumerVariants))
     }
-    fun getDish(position : Int) = dishes?.get(position)
+    fun getDish(position : Int) = dishes.get(position)
 
     override fun toString() : String {
-        var text  = name + "  -   "
-        if (getDishesCount() == 0 ){
-            text += " Sin platos"
-        }
-        else{
-            text += " ${getDishesCount()} platos"
-        }
-
+        var text  = name
         return text
     }
 }

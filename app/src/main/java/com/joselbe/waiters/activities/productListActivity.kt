@@ -13,6 +13,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import com.joselbe.waiters.fragments.TableDetailFragment
 import com.joselbe.waiters.models.CONSTANT_CURRENCY
 import com.joselbe.waiters.models.menus
 import org.jetbrains.anko.image
@@ -20,15 +21,17 @@ import org.jetbrains.anko.image
 class productListActivity : FragmentActivity() {
 
     companion object {
-        val MENU_SELECTED = "MENU_SELECTED"
+        val ARG_TABLE = "ARG_TABLE"
 
-        fun intent(context: Context): Intent {
+        fun intent(context: Context, tablepos : Int): Intent {
             val intent = Intent(context, productListActivity::class.java)
+            intent.putExtra(ARG_TABLE, tablepos)
             return intent
         }
     }
 
     lateinit var list : ListView
+    var tablepos = 0 // Mesa con la que trabajamos
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,14 +39,20 @@ class productListActivity : FragmentActivity() {
 
         list = findViewById<ListView>(R.id.table_list_product)
         list.adapter = ListaAdapter(this) //asignamos el adapter a la lista
+        //parametro con la mesa
+        tablepos = intent.getIntExtra(ARG_TABLE, 0)
+
+
 
         // Nos enteramos de que se ha pulsado un elemento de la lista así:
         list.setOnItemClickListener { parent, view, position, id ->
             Snackbar.make(findViewById<View>(android.R.id.content), "Se ha hecho click ${position} ", Snackbar.LENGTH_LONG).show()
+            //lanzamos el intent
+            val intent = productDetailActivity.intent(this, tablepos,position)
+            startActivity(intent)
         }
 
     }
-
 
 
     // ..............................................................
@@ -177,7 +186,7 @@ class productListActivity : FragmentActivity() {
                 alg_13 = row?.findViewById<ImageView>(R.id.alg_13)!!
                 alg_14 = row?.findViewById<ImageView>(R.id.alg_14)!!
 
-                //TODO: Faltan los alergenicos
+
             }
         }
 

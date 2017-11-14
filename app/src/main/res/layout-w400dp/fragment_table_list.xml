@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.joselbe.waiters.fragments.TableListFragment"
+    android:id="@+id/viewSwitcher">
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/default_margin"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/table_list"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/table_detail"
+            android:layout_width="389dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</ViewSwitcher>
