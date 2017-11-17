@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_margin_8">8dp</dimen>
     <dimen name="default_32">32dp</dimen>
+    <dimen name="default_6">6dp</dimen>
+    <dimen name="subtitulo_1">18sp</dimen>
+    <dimen name="titulo_1">24sp</dimen>
+    <dimen name="titulo_max">30sp</dimen>
+    <dimen name="def_16">16dp</dimen>
+    <dimen name="alergenicos_width">20dp</dimen>
+    <dimen name="alergenicos_height">20dp</dimen>
+    <dimen name="subtutulo_3">14sp</dimen>
 </resources>

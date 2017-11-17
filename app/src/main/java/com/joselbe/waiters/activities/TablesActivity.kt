@@ -22,20 +22,14 @@ class TablesActivity : AppCompatActivity() , TableListFragment.OnTableSelectedLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tables)
 
+
+
         if (findViewById<View>(R.id.table_list_fragments) != null) {
 
             // Comprobamos primero que no tenemos ya añadido el fragment a nuestra jerarquía
             if (fragmentManager.findFragmentById(R.id.table_list) == null) {
                 val fragment = TableListFragment.newInstance()
                 fragmentManager.beginTransaction().add(R.id.table_list_fragments, fragment).commit()
-            }
-
-            if (findViewById<View>(R.id.table_detail) != null) {
-                // Comprobamos primero que no tenemos ya añadido el fragment a nuestra jerarquía
-                if (fragmentManager.findFragmentById(R.id.table_detail) == null) {
-                    val fragment = TableDetailFragment.newInstance(0)
-                    fragmentManager.beginTransaction().add(R.id.table_detail, fragment).addToBackStack("2").commit()
-                }
             }
 
         }
@@ -58,6 +52,10 @@ class TablesActivity : AppCompatActivity() , TableListFragment.OnTableSelectedLi
                      addToBackStack("").
                      commit()
         }
+
+        //cambio el titulo
+        this.setTitle("Waiters - Mesa " + (position+1).toString())
+
     }
 
     //listener de Detail Table.

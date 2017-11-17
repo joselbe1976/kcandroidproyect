@@ -59,7 +59,10 @@ class productDetailActivity : AppCompatActivity() {
              finish()
         }
 
-
+        //boton de volver
+        gobackDetaiLproduct.setOnClickListener {
+            finish()
+        }
 
 
     }

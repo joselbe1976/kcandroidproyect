@@ -99,6 +99,7 @@ class TableListFragment : android.app.Fragment(){
     override fun onResume() {
         super.onResume()
         list.adapter = TablesListaAdapter(activity) //Reasigno para refrescar
+        activity.setTitle("Waiters")
 
     }
 
@@ -146,6 +147,18 @@ class TableListFragment : android.app.Fragment(){
                     data.await() //hilo secundario
                     viewSwitcher.displayedChild = VIEW_INDEX.TABLES.index //Se cambia vista al principal que es la lista de mesas
                     list.adapter = TablesListaAdapter(activity) //asignamos el adapter a la lista
+
+                    /* Si modo Tablet entonces lanzamos cojntrolador mesa position 0 */
+                    if (root.findViewById<View>(R.id.table_detail) != null) {
+                        // Comprobamos primero que no tenemos ya añadido el fragment a nuestra jerarquía
+                        if (fragmentManager.findFragmentById(R.id.table_detail) == null) {
+                            val fragment = TableDetailFragment.newInstance(0)
+                            fragmentManager.beginTransaction().add(R.id.table_detail, fragment).addToBackStack("").commit()
+
+                            //ponemos titulo
+                            activity.setTitle("Waiters - Mesa 1")
+                        }
+                    }
             }
     }
 

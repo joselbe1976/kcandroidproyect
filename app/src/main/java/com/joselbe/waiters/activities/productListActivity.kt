@@ -16,6 +16,7 @@ import android.widget.TextView
 import com.joselbe.waiters.fragments.TableDetailFragment
 import com.joselbe.waiters.models.CONSTANT_CURRENCY
 import com.joselbe.waiters.models.menus
+import kotlinx.android.synthetic.main.fragment_product_list.*
 import org.jetbrains.anko.image
 
 class productListActivity : FragmentActivity() {
@@ -46,12 +47,15 @@ class productListActivity : FragmentActivity() {
 
         // Nos enteramos de que se ha pulsado un elemento de la lista así:
         list.setOnItemClickListener { parent, view, position, id ->
-            Snackbar.make(findViewById<View>(android.R.id.content), "Se ha hecho click ${position} ", Snackbar.LENGTH_LONG).show()
+
             //lanzamos el intent
             val intent = productDetailActivity.intent(this, tablepos,position)
             startActivity(intent)
         }
-
+        //boton de volver
+        goback.setOnClickListener {
+            finish()  //finalizo actividad
+        }
     }
 
 

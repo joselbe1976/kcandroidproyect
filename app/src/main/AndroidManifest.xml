@@ -19,9 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.productListActivity" />
-        <activity android:name=".activities.productDetailActivity" />
-        <activity android:name=".activities.printBillActivity"></activity>
+        <activity android:name=".activities.productListActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.productDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.printBillActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

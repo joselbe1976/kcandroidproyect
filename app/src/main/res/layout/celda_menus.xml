@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/alg_8"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
         app:layout_constraintStart_toStartOf="@+id/alg_1"
         app:layout_constraintTop_toBottomOf="@+id/alg_1"
@@ -19,8 +19,8 @@
 
     <ImageView
         android:id="@+id/alg_9"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
         app:layout_constraintStart_toEndOf="@+id/alg_8"
         app:layout_constraintTop_toBottomOf="@+id/alg_2"
@@ -28,16 +28,16 @@
 
     <ImageView
         android:id="@+id/alg_10"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         app:layout_constraintStart_toEndOf="@+id/alg_9"
         app:layout_constraintTop_toBottomOf="@+id/alg_3"
         app:srcCompat="@mipmap/alergenocrustaceo" />
 
     <ImageView
         android:id="@+id/alg_11"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
         app:layout_constraintStart_toEndOf="@+id/alg_10"
         app:layout_constraintTop_toBottomOf="@+id/alg_5"
@@ -45,8 +45,8 @@
 
     <ImageView
         android:id="@+id/alg_12"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
         android:layout_marginStart="4dp"
         app:layout_constraintStart_toEndOf="@+id/alg_11"
@@ -55,8 +55,8 @@
 
     <ImageView
         android:id="@+id/alg_13"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
         app:layout_constraintStart_toEndOf="@+id/alg_12"
         app:layout_constraintTop_toBottomOf="@+id/alg_7"
@@ -64,10 +64,10 @@
 
     <ImageView
         android:id="@+id/alg_14"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/alg_13"
         app:layout_constraintTop_toBottomOf="@+id/alg_6"
         app:srcCompat="@mipmap/alergenolacteo" />
@@ -77,9 +77,9 @@
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginLeft="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         android:layout_rowSpan="3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -90,11 +90,11 @@
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_margin="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/default_margin_8"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         android:paddingRight="1dp"
-        android:textSize="18sp"
+        android:textSize="@dimen/subtitulo_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageproduct"
         app:layout_constraintTop_toBottomOf="@+id/name"
@@ -104,11 +104,11 @@
         android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_margin="@dimen/default_margin_8"
+        android:layout_marginEnd="@dimen/default_margin_8"
+        android:layout_marginStart="@dimen/default_margin_8"
         android:paddingRight="1dp"
-        android:textSize="18sp"
+        android:textSize="@dimen/subtitulo_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageproduct"
         tools:layout_editor_absoluteY="10dp"
@@ -116,77 +116,77 @@
 
     <ImageView
         android:id="@+id/alg_1"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toStartOf="@+id/price"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenomolusco" />
 
     <ImageView
         android:id="@+id/alg_2"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_1"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenomostaza" />
 
     <ImageView
         android:id="@+id/alg_3"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_2"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenopescado" />
 
     <ImageView
         android:id="@+id/alg_4"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_5"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenosesamo" />
 
     <ImageView
         android:id="@+id/alg_5"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_3"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenosoja" />
 
     <ImageView
         android:id="@+id/alg_6"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_7"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenoapio" />
 
     <ImageView
         android:id="@+id/alg_7"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/alergenicos_width"
+        android:layout_height="@dimen/alergenicos_height"
         android:layout_margin="1dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin_8"
+        android:layout_marginTop="@dimen/default_margin_8"
         app:layout_constraintStart_toEndOf="@+id/alg_4"
         app:layout_constraintTop_toBottomOf="@+id/price"
         app:srcCompat="@mipmap/alergenoaltramuces" />
