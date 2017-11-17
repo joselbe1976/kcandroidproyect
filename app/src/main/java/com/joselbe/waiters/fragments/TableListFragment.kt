@@ -6,9 +6,8 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.support.v7.app.AppCompatActivity
+import android.view.*
 import android.widget.*
 
 import com.joselbe.waiters.R
@@ -62,6 +61,10 @@ class TableListFragment : android.app.Fragment(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        super.onCreateOptionsMenu(menu, inflater)
+
 
     }
 
@@ -84,7 +87,6 @@ class TableListFragment : android.app.Fragment(){
             //descarga de los menus
             downloadTables()
 
-
         }
 
         return root
@@ -93,6 +95,13 @@ class TableListFragment : android.app.Fragment(){
 
 
     //ciclo de vida del Fragment
+
+    override fun onResume() {
+        super.onResume()
+        list.adapter = TablesListaAdapter(activity) //Reasigno para refrescar
+
+    }
+
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         commonAttach(context)

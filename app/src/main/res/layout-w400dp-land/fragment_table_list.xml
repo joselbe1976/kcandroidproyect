@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +7,6 @@
     tools:context="com.joselbe.waiters.fragments.TableListFragment"
     android:id="@+id/viewSwitcher">
 
-
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
@@ -15,15 +14,32 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/default_margin"
         android:indeterminate="true" />
-    <FrameLayout
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-           
-            <ListView
-                android:id="@+id/table_list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </ListView>
-    </FrameLayout>
+        <ListView
+            android:id="@+id/table_list"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <FrameLayout
+            android:id="@+id/table_detail"
+            android:layout_width="389dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </LinearLayout>
 
 </ViewSwitcher>

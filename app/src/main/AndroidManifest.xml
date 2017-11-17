@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TablesActivity">
+        <activity android:name=".activities.TablesActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.productListActivity" />
-        <activity android:name=".activities.productDetailActivity"></activity>
+        <activity android:name=".activities.productDetailActivity" />
+        <activity android:name=".activities.printBillActivity"></activity>
     </application>
 
 </manifest>

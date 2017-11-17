@@ -53,7 +53,10 @@ class TablesActivity : AppCompatActivity() , TableListFragment.OnTableSelectedLi
         }
         else
         {
-             fragmentManager.beginTransaction().replace(R.id.table_list_fragments, fragment).addToBackStack("3").commit()
+             fragmentManager.beginTransaction().
+                     replace(R.id.table_list_fragments, fragment).
+                     addToBackStack("").
+                     commit()
         }
     }
 
@@ -63,6 +66,13 @@ class TablesActivity : AppCompatActivity() , TableListFragment.OnTableSelectedLi
         val intent = productListActivity.intent(this, tablePos)
         startActivity(intent)
     }
+
+    //impresion factura de la mesa
+    override fun onTablePrintBill(tablePos: Int) {
+        val intent = printBillActivity.intent(this, tablePos)
+        startActivity(intent)
+    }
+
 
 
 }

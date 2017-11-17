@@ -21,4 +21,8 @@ object Tables : Serializable {
     operator fun get(i: Int) = tables[i]
 
     fun toArray() = tables.toTypedArray()
+
+    fun getTotalBillPrice(position : Int) : Float {
+        return tables[position].getTotalPrice()
+    }
 }
