@@ -251,14 +251,6 @@ class TableListFragment : android.app.Fragment(){
             //asignamos a la vista
             vh.tituloMenu.text = Tables[position].name
 
-            if (Tables[position].getDishesCount() == 0){
-                vh.subtituloMenu.text = "Sin platos"
-            }
-            else{
-                vh.subtituloMenu.text = "${Tables[position].getDishesCount() } platos"
-            }
-
-
             return view!!
 
         }
@@ -274,12 +266,10 @@ class TableListFragment : android.app.Fragment(){
         //Clase Holder
         internal class ListRowHolder(row: View?) {
             public val tituloMenu: TextView
-            public val subtituloMenu: TextView
 
             init {
 
                 tituloMenu = row?.findViewById<TextView>(R.id.tituloMenu)!!
-                subtituloMenu = row?.findViewById<TextView>(R.id.subtituloMenu)!!
             }
         }
 
