@@ -9,7 +9,7 @@ Development :
   3. SDK min: 16
   4. URL JSON Data: http://www.mocky.io/v2/5a09f1c02e0000b107489bd1?mocky-delay=2000ms
   7. Uso de botones flotantes en el App.
-  5. Descripcion funciona:
+  5. Descripcion funcional:
     - Al arrancar la aplicacion de cargan los datos mostrarndo una barra de progreso, una vez descargados, se muestra las mesas.
     - Al seleccionar una mesa se muestra el contenido de la misma. Desde ahi se puede ejecutar la factura o añadir platos.
     - Al pulsar "Factura Pagada" se eliminan del modelo los platos asociados a la mesa
